@@ -3,8 +3,9 @@ import axios from "axios";
 export const PhotoContext = createContext();
 const PhotoProvider = ({ children }) => {
   const [data, setData] = useState(null);
-  const PHOTO_URL = "/photos.json";
-
+  const isProduction = process.env.NODE_ENV === "production";
+  const PHOTO_URL = isProduction ? "/photos.json" : "/photos.json";
+  console.log(PHOTO_URL);
   useEffect(() => {
     // Make a GET request using Axios
     axios
