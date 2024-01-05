@@ -7,16 +7,13 @@ const PhotoProvider = ({ children }) => {
   const PHOTO_URL = isProduction ? "/photos.json" : "/photos.json";
   // console.log(PHOTO_URL);
   useEffect(() => {
-    // Make a GET request using Axios
     axios
       .get(PHOTO_URL)
       .then((response) => {
-        // Handle the JSON data from the response
         setData(response.data.photos);
         console.log("get data");
       })
       .catch((error) => {
-        // Handle errors
         console.error("Error fetching data:", error);
       });
   }, []);
