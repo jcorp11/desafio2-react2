@@ -5,7 +5,7 @@ const Card = ({ photo, isFav }) => {
   return (
     <div
       className="photo"
-      style={{ backgroundImage: `url(${photo.src.original})` }}
+      style={{ backgroundImage: `url(${photo.src.portrait})` }}
     >
       {!isFav && (
         <>

@@ -10,8 +10,8 @@ import PhotoProvider from "./context/PhotoContext";
 const App = () => {
   return (
     <div>
+      <Navbar />
       <PhotoProvider>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/favoritos" element={<Favorites />} />
