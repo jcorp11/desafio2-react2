@@ -1,10 +1,5 @@
-import { Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
-
-import Favorites from "./views/Favorites";
-import Home from "./views/Home";
-
+import Router from "./router/Router";
 import PhotoProvider from "./context/PhotoContext";
 
 const App = () => {
@@ -12,10 +7,7 @@ const App = () => {
     <div>
       <Navbar />
       <PhotoProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/favoritos" element={<Favorites />} />
-        </Routes>
+        <Router />
       </PhotoProvider>
     </div>
   );

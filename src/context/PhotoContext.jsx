@@ -6,7 +6,6 @@ export const PhotoContext = createContext();
 const PhotoProvider = ({ children }) => {
   const [data, setData] = useState(null);
   console.log(process.env.NODE_ENV);
-  const PHOTO_URL = "/photos.json";
 
   useEffect(() => {
     const getPhotosWrapper = async () => {
