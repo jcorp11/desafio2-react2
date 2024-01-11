@@ -26,13 +26,23 @@ a {
   color: white;
 }
 
-.navbar {
+.navbar,
+.footer {
   background: #43a047;
   padding: 20px;
   color: white;
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: black;
+  font-weight: bold;
 }
 
 /* gallery */
